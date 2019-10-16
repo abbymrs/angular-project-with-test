@@ -1,0 +1,9 @@
+<p>customer-list works!</p>
+<ul>
+    <li
+        *ngFor="let customer of customers | filter: { name: 'abby', id: 1 }"
+        (click)="goDetail(customer)"
+    >
+        {{ customer.name }}
+    </li>
+</ul>

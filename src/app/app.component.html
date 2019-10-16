@@ -1,0 +1,50 @@
+<nz-layout>
+    <nz-header>
+        <div>Scan Demo</div>
+    </nz-header>
+    <nz-content class="white-bg">
+        <!-- <div class="search-wrapper" *ngIf="authObj.status === 200">
+            <nz-input-group
+                nzSearch
+                nzSize="large"
+                [nzAddOnAfter]="suffixButton"
+            >
+                <input
+                    [(ngModel)]="searchKeyWord"
+                    type="text"
+                    nz-input
+                    placeholder="input api path"
+                />
+            </nz-input-group>
+            <ng-template #suffixButton>
+                <button
+                    nz-button
+                    nzType="primary"
+                    nzSize="large"
+                    nzSearch
+                    [disabled]="!searchKeyWord.trim()"
+                    (click)="onSearch()"
+                >
+                    Search
+                </button>
+            </ng-template>
+            <div class="search-result">
+                <ng-container *ngIf="result.url">
+                    <div class="search-url">url: {{ result.url }}</div>
+                    <div
+                        [ngStyle]="{ color: result.status == 0 ? '#f00' : '' }"
+                    >
+                        message: {{ result.message }}
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+        <nz-alert
+            *ngIf="authObj.status !== 200"
+            nzType="error"
+            [nzMessage]="authObj.message"
+        ></nz-alert> -->
+        <router-outlet></router-outlet>
+    </nz-content>
+    <nz-footer>Ant Design ©2019 Implement By Angular</nz-footer>
+</nz-layout>
