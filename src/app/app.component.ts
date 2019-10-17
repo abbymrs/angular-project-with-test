@@ -21,6 +21,10 @@ export class AppComponent implements OnInit {
     constructor(public apiService: ApiService) {}
 
     ngOnInit(): void {
+        this.getAuth();
+    }
+
+    getAuth() {
         this.apiService.getAuth().subscribe(res => {
             this.authObj = res;
         });
